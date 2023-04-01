@@ -1,0 +1,98 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-awsamplifychatbot-dev-220300-authRole",
+      "UnauthRoleArn": "arn:aws:iam::848050315253:role/amplify-awsamplifychatbot-dev-220300-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::848050315253:role/amplify-awsamplifychatbot-dev-220300-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-awsamplifychatbot-dev-220300-deployment",
+      "UnauthRoleName": "amplify-awsamplifychatbot-dev-220300-unauthRole",
+      "StackName": "amplify-awsamplifychatbot-dev-220300",
+      "StackId": "arn:aws:cloudformation:us-east-1:848050315253:stack/amplify-awsamplifychatbot-dev-220300/d7b4cf60-c467-11ed-b6cc-12d99afe295d",
+      "AmplifyAppId": "d4lczenz6vfy8"
+    }
+  },
+  "auth": {
+    "awsamplifychatbot": {
+      "dependsOn": [],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": []
+        },
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito",
+      "serviceType": "managed",
+      "output": {
+        "IdentityPoolId": "us-east-1:e273ddb5-a451-4ed7-88a1-e8893d72f12c",
+        "IdentityPoolName": "awsamplifychatbot_identitypool_755bfe10__dev",
+        "UserPoolId": "us-east-1_8rWFtDy3V",
+        "AppClientIDWeb": "353dqic9l1htk0rm7n7n8levqr",
+        "AppClientID": "5en4bg9mps08h46hed7nqf4u4s",
+        "UserPoolArn": "arn:aws:cognito-idp:us-east-1:848050315253:userpool/us-east-1_8rWFtDy3V",
+        "UserPoolName": "awsamplifychatbot_userpool_1c956ae6"
+      },
+      "lastPushTimeStamp": "2023-03-22T05:33:09.917Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-awsamplifychatbot-dev-220300-deployment/amplify-cfn-templates/auth/awsamplifychatbot-cloudformation-template.json",
+        "logicalId": "authawsamplifychatbot"
+      },
+      "lastPushDirHash": "2lCudLJ/qEskAO/tw9pMOWu2QpI="
+    },
+    "userPoolGroups": {
+      "dependsOn": [
+        {
+          "category": "auth",
+          "resourceName": "awsamplifychatbot",
+          "attributes": [
+            "UserPoolId",
+            "AppClientIDWeb",
+            "AppClientID",
+            "IdentityPoolId"
+          ]
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito-UserPool-Groups",
+      "lastPushTimeStamp": "2023-03-22T05:33:09.917Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-awsamplifychatbot-dev-220300-deployment/amplify-cfn-templates/auth/userPoolGroups-cloudformation-template.json",
+        "logicalId": "authuserPoolGroups"
+      },
+      "output": {
+        "WellianTESTGroupRole": "arn:aws:iam::848050315253:role/us-east-1_8rWFtDy3V-WellianTESTGroupRole"
+      },
+      "lastPushDirHash": "gRnxvMmtVz7iksZfgdubQcplUWI="
+    }
+  },
+  "interactions": {
+    "lexd5fb522d": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lex",
+      "output": {
+        "FunctionArn": "arn:aws:lambda:us-east-1:848050315253:function:awsamplifychatbot_cfnlambda_3adf6998-dev",
+        "Region": "us-east-1",
+        "BotName": "OrderFlowers_dev"
+      },
+      "lastPushTimeStamp": "2023-03-22T05:33:09.538Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-awsamplifychatbot-dev-220300-deployment/amplify-cfn-templates/interactions/lexd5fb522d-cloudformation-template.json",
+        "logicalId": "interactionslexd5fb522d"
+      }
+    }
+  }
+}

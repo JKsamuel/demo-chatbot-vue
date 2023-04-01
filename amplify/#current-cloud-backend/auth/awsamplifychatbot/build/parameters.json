@@ -1,0 +1,59 @@
+{
+  "identityPoolName": "awsamplifychatbot_identitypool_755bfe10",
+  "allowUnauthenticatedIdentities": false,
+  "resourceNameTruncated": "awsamp1c956ae6",
+  "userPoolName": "awsamplifychatbot_userpool_1c956ae6",
+  "autoVerifiedAttributes": [
+    "email"
+  ],
+  "mfaConfiguration": "OFF",
+  "mfaTypes": [
+    "SMS Text Message"
+  ],
+  "smsAuthenticationMessage": "Your authentication code is {####}",
+  "smsVerificationMessage": "Your verification code is {####}",
+  "emailVerificationSubject": "Your verification code",
+  "emailVerificationMessage": "Your verification code is {####}",
+  "defaultPasswordPolicy": false,
+  "passwordPolicyMinLength": 8,
+  "passwordPolicyCharacters": [],
+  "requiredAttributes": [
+    "email"
+  ],
+  "aliasAttributes": [],
+  "userpoolClientGenerateSecret": false,
+  "userpoolClientRefreshTokenValidity": 30,
+  "userpoolClientWriteAttributes": [
+    "email"
+  ],
+  "userpoolClientReadAttributes": [
+    "email"
+  ],
+  "userpoolClientLambdaRole": "awsamp1c956ae6_userpoolclient_lambda_role",
+  "userpoolClientSetAttributes": false,
+  "authSelections": "identityPoolAndUserPool",
+  "resourceName": "awsamplifychatbot",
+  "sharedId": "755bfe10",
+  "serviceName": "Cognito",
+  "useDefault": "default",
+  "authRoleArn": {
+    "Fn::GetAtt": [
+      "AuthRole",
+      "Arn"
+    ]
+  },
+  "unauthRoleArn": {
+    "Fn::GetAtt": [
+      "UnauthRole",
+      "Arn"
+    ]
+  },
+  "breakCircularDependency": true,
+  "useEnabledMfas": true,
+  "dependsOn": [],
+  "userPoolGroupList": [
+    "WellianTEST"
+  ],
+  "hostedUI": false,
+  "authProviders": []
+}
